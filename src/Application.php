@@ -12,6 +12,11 @@
 
 namespace Lumina;
 
+use Dotenv\Dotenv;
+use Monolog\Logger;
+use Monolog\Level;
+use Monolog\Handler\StreamHandler;
+
 /**
  * Clase Application
  *
@@ -45,6 +50,9 @@ class Application
     // Layout predeterminado para las vistas
     public string $layout = 'main';
 
+    // Instancia de Monolog
+    public Logger $logger;
+
     /**
      * Constructor de la clase Application.
      *
@@ -56,11 +64,20 @@ class Application
         self::$ROOT_DIR = $rootDir;
         self::$app = $this;
 
+        // Configuración de phpdotenv
+        $dotenv = Dotenv::createImmutable($rootDir);
+        $dotenv->load();
+
         // Creación de objetos iniciales
         $this->request = new Request();
         $this->response = new Response();
         $this->router = new Router($this->request, $this->response);
         $this->view = new View();
+
+        // Configuración de Monolog
+        $this->logger = new Logger('lumina');
+        $logFilePath = self::$ROOT_DIR . '/logs/app.log';
+        $this->logger->pushHandler(new StreamHandler($logFilePath, Level::Debug));
     }
 
     /**
