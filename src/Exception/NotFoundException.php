@@ -7,7 +7,7 @@
  *
  * @package     Lumina
  * @subpackage  Exception
- * @version     1.0.0
+ * @version     1.1.0
  * @author      IDEAMOS TU WEB <hola@ideamostuwe.com>
  * @link        https://github.com/ideamostuweb/lumina
  */

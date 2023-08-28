@@ -1,7 +1,7 @@
 {
     "name": "ideamostuweb/lumina-framework",
     "description": "Lumina - A simple and reusable PHP framework.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "type": "project",
     "license": "MIT",
     "autoload": {

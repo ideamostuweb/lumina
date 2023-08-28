@@ -6,7 +6,7 @@
  * Este archivo es parte del Lumina Framework desarrollado para crear aplicaciones web robustas y escalables.
  *
  * @package     Lumina
- * @version     1.0.0
+ * @version     1.1.0
  * @author      IDEAMOS TU WEB
  */
 
