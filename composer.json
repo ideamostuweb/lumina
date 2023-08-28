@@ -17,5 +17,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "monolog/monolog": "^3.4",
+        "catfan/medoo": "^2.1"
+    }
 }
