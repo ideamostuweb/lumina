@@ -25,6 +25,7 @@
     "require": {
         "vlucas/phpdotenv": "^5.5",
         "monolog/monolog": "^3.4",
-        "catfan/medoo": "^2.1"
+        "catfan/medoo": "^2.1",
+        "symfony/console": "^6.3"
     }
 }
