@@ -14,7 +14,7 @@
 
 namespace Lumina\Database;
 
-use Catfan\Medoo\Medoo;
+use Medoo\Medoo;
 
 /**
  * Clase Model

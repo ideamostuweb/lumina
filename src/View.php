@@ -22,6 +22,8 @@ namespace Lumina;
  */
 class View
 {
+    private string $layout = 'main';
+    private string $viewPath = '';
     /**
      * Renderiza una vista y la incrusta en un layout.
      *
@@ -35,7 +37,7 @@ class View
         $viewContent = $this->renderViewOnly($view, $params);
 
         ob_start();
-        include_once Application::$ROOT_DIR . "/views/layouts/$layoutName.php";
+        include_once Application::$ROOT_DIR . $viewPath . $layoutName . ".php";
         $layoutContent = ob_get_clean();
 
         return str_replace('{{content}}', $viewContent, $layoutContent);
@@ -53,7 +55,29 @@ class View
         extract($params);
 
         ob_start();
-        include_once Application::$ROOT_DIR . "/views/$view.php";
+        include_once Application::$ROOT_DIR . "/Views/$view.php";
         return ob_get_clean();
+    }
+
+    /**
+     * Establece el nombre del layout para las vistas.
+     *
+     * @param string $layout Nombre del layout.
+     * @return void
+     */
+    public function setLayout(string $layout): void
+    {
+        $this->layout = $layout;
+    }
+
+    /**
+     * Establece la ruta base para las vistas.
+     *
+     * @param string $path Ruta base para las vistas.
+     * @return void
+     */
+    public function setViewPath(string $path): void
+    {
+        $this->viewPath = rtrim($path, '/');
     }
 }

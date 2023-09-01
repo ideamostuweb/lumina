@@ -11,7 +11,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Lumina\\": "/src"
+            "Lumina\\": "/src",
+            "Lumina\\Commands\\": "/src/Commands",
+            "Lumina\\Database\\": "/src/Database",
+            "Lumina\\Exception\\": "/src/Exception"
         }
     },
     "authors": [

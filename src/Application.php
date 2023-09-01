@@ -6,7 +6,7 @@
  * Este archivo es parte del Lumina Framework desarrollado para crear aplicaciones web robustas y escalables.
  *
  * @package     Lumina
- * @version     1.1.0
+ * @version     1.1.2
  * @link        https://github.com/ideamostuweb/lumina
  */
 
@@ -23,7 +23,7 @@ use Monolog\Handler\StreamHandler;
  * Clase principal que inicializa y maneja la aplicación Lumina.
  *
  * @package     Lumina
- * @since       1.0.0
+ * @since       1.1.2
  */
 class Application
 {
